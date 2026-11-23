@@ -1,9 +1,13 @@
-name: Deploy Website
+
+name: Deploy HTML to Somee
 
 on:
   push:
     branches:
       - main
+
+permissions:
+  contents: read
 
 jobs:
   deploy:
@@ -11,9 +15,28 @@ jobs:
 
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Check website files
-        run: |
-          ls -la
-          echo "Website source is ready"
+      - name: Test FTP deployment
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+
+          protocol: ftp
+          port: 21
+
+          local-dir: ./
+          server-dir: www.lab6-github.somee.com/
+
+          dry-run: true
+
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.github/**
+            README.md
+            default.asp
+            .ftp-deploy-sync-state.json
