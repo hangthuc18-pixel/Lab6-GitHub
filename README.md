@@ -7,3 +7,7 @@
 
 ## Muc tieu
 Thuc hanh Git, Commit, Push, Branch, Merge va Pull Request.
+## Chuc nang bo sung
+- Quan ly ma nguon bang Git.
+- Luu tru ma nguon tren GitHub.
+- Lam viec voi Branch va Pull Request.
