@@ -1,4 +1,5 @@
-# Du an GitHub - Main version
+<<<<<<< HEAD
+# Du an GitHub - Main va Feature
 
 ## Thong tin du an
 - Mon hoc: Quan ly phien ban
