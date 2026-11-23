@@ -1,4 +1,4 @@
-# Lab 6 - Git va GitHub
+# Du an GitHub - Main
 
 ## Thong tin du an
 - Mon hoc: Quan ly phien ban
