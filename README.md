@@ -1,4 +1,4 @@
-# Du an GitHub - Main
+# Du an GitHub - Feature
 
 ## Thong tin du an
 - Mon hoc: Quan ly phien ban
